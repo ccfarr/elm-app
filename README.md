@@ -17,10 +17,10 @@ docker image ls
 ```
 
 Run container from image
-* -p specify ports
-* --rm remove container after stopped
-* --name name the container (same as image)
-* -v mount volume on local machine
+* `-p` specify ports
+* `--rm` remove container after stopped
+* `--name` name the container (same as image)
+* `-v` mount volume on local machine
 ```
 docker container run -p 8888:8888 --name node-api --rm -v ~/elm-app/node-api/src:/usr/src/app/src node-api
 ```
