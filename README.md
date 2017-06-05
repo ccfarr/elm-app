@@ -1,10 +1,10 @@
 ## Purpose
 
-Toy app using Elm + Postgres + Node + Docker  
+Build "toy" app using Elm + Postgres + Node + Docker  
 
 Inspired by [Simple Node App with Docker](https://github.com/codeschool/WatchUsBuild-SimpleNodeAppWithDocker.git)
 
-## Run node-api server
+### Run node-api server
 
 From `node-api` directory, build image named `node-api` using `Dockerfile`
 ```
