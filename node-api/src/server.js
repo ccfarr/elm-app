@@ -8,6 +8,9 @@ app.get('/', function(request, response) {
 
   // Send Hello World response
   response.send('Hello world!');
+
+  // Send file index.html as response
+  // response.sendFile(__dirname + '/index.html');
 });
 
 // Return json

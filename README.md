@@ -71,11 +71,29 @@ git checkout -b json-example
 Commit changes and push to github
 ```
 git commit -am "some message"
-git push
 ```
 
 Merge changes back to master branch
 ```
 git checkout master
 git merge json-example
+```
+
+Push to github
+```
+git push
+```
+
+### Directory structure
+
+```
+elm-app - project folder
+ |
+ +-- node-api - node api server
+    |
+    +-- src - source code directory
+       |
+       +-- index.html - elm app
+       |
+       +-- server.js - node code
 ```
