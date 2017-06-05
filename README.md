@@ -6,7 +6,7 @@ Inspired by [Simple Node App with Docker](https://github.com/codeschool/WatchUsB
 
 ### Run node-api server
 
-From `node-api` directory, build image named `node-api` using `Dockerfile`
+From `node-api` directory, build image named `node-api`
 ```
 docker build -t node-api .
 ```
@@ -24,6 +24,29 @@ Run container from image
 ```
 docker container run -p 8888:8888 --name node-api --rm -v ~/elm-app/node-api/src:/usr/src/app/src node-api
 ```
+
+### Run pg-database server
+
+From `pg-database` directory, build image named `pg-database`
+```
+docker build -t pg-database .
+```
+
+Run container from image
+```
+docker container run -p 9000:5432 --name pg-database --rm pg-database
+```
+
+### Interact with database
+
+Run postgres client from container prompt
+```
+docker container exec -it pg-database psql -U postgres
+```
+
+* `\l` - list databases
+* `\dt` - list tables
+* `\q` - quit postgres client
 
 ### Git cheatsheet
 
