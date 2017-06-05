@@ -4,16 +4,17 @@ Toy app using Elm + Postgres + Node + Docker
 
 Inspired by [Simple Node App with Docker](https://github.com/codeschool/WatchUsBuild-SimpleNodeAppWithDocker.git)
 
-## Run node-api
+## Run node-api server
 
 From `node-api` directory, build image named `node-api` using `Dockerfile`
 ```
-docker build -t node-app .
+docker build -t node-api .
 ```
 
 View image
 ```
 docker image ls
+```
 
 Run container from image
 * -p specify ports
