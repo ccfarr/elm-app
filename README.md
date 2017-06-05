@@ -24,3 +24,35 @@ Run container from image
 ```
 docker container run -p 8888:8888 --name node-api --rm -v ~/elm-app/node-api/src:/usr/src/app/src node-api
 ```
+
+### Git cheatsheet
+
+Get started
+```
+git init
+git add .
+git commit -m "initial commit"
+```
+
+*After creating new repository on github*
+```
+git remote add origin git@github.com:ccfarr/elm-app.git
+git push -u origin master
+```
+
+Make a topic branch
+```
+git checkout -b json-example
+```
+
+Commit changes and push to github
+```
+git commit -am "some message"
+git push
+```
+
+Merge changes back to master branch
+```
+git checkout master
+git merge json-example
+```
