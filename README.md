@@ -115,7 +115,7 @@ elm-app - project folder
   +-- README.MD - this file
 ```
 
-## Shutdown
+## Cleanup
 
 Stop containers
 
