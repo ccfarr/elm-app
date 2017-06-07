@@ -26,7 +26,7 @@ Inspired by [Simple Node App with Docker](https://github.com/codeschool/WatchUsB
 
 5. Follow **Run elm-front-end** directions below
 
-## Run node-api server
+## Run `node-api` server
 
 From `node-api` directory, build image named `node-api`
 ```
@@ -47,7 +47,7 @@ Run container from image
 docker container run -p 8888:8888 --name node-api --rm -v ~/elm-app/node-api/src:/usr/src/app/src node-api
 ```
 
-## Run pg-database server
+## Run `pg-database` server
 
 From `pg-database` directory, build image named `pg-database`
 ```
@@ -70,7 +70,7 @@ docker container exec -it pg-database psql -U postgres
 * `\dt` - list tables
 * `\q` - quit postgres client
 
-## Run elm-front-end
+## Run `elm-front-end`
 
 From `elm-front-end` directory, build image named `elm-front-end`
 ```
