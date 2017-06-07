@@ -8,7 +8,6 @@ Inspired by [Simple Node App with Docker](https://github.com/codeschool/WatchUsB
 
 - Post vote changes to db
 - Complete directory structure section below
-- Add ignore topic branch to git cheatsheet
 - Specify the ports used in readme
 
 ## Issues
@@ -46,10 +45,6 @@ docker image ls
 ```
 
 Run container from image
-* `-p` specify ports
-* `--rm` remove container after stopped
-* `--name` name the container (same as image)
-* `-v` mount volume on local machine
 ```
 docker container run -p 8888:8888 --name node-api --rm -v ~/elm-app/node-api/src:/usr/src/app/src node-api
 ```
@@ -66,17 +61,6 @@ Run container from image
 docker container run -p 9000:5432 --name pg-database --rm pg-database
 ```
 
-## Interact with database
-
-Run postgres client from container prompt
-```
-docker container exec -it pg-database psql -U postgres
-```
-
-* `\l` - list databases
-* `\dt` - list tables
-* `\q` - quit postgres client
-
 ## Run `elm-front-end`
 
 From `elm-front-end` directory, build image named `elm-front-end`
@@ -88,6 +72,59 @@ Run container from image
 ```
 docker container run -p 4000:4000 --name elm-front-end --rm -v ~/elm-app/elm-front-end/src:/usr/src/app/src elm-front-end
 ```
+
+## Directory structure
+
+```
+elm-app - project folder
+ |
+ +-- node-api - node api server
+    |
+    +-- src - source code directory
+       |
+       +-- server.js - node code
+```
+
+## Docker command line parameters
+
+* `-p` specify ports
+* `--rm` remove container after stopped
+* `--name` name the container (same as image)
+* `-v` mount volume on local machine
+
+## Interact with database
+
+Run postgres client from container prompt
+```
+docker container exec -it pg-database psql -U postgres
+```
+
+* `\l` - list databases
+* `\dt` - list tables
+* `\q` - quit postgres client
+
+## Ports and endpoints
+
+* [http://localhost:8888/json](http://localhost:8888/json) - returns info from db in json format
+
+```
+[
+  {
+    "id": 1,
+    "option_name": "sandwiches",
+    "number_of_votes": 7
+  },
+  {
+    "id": 2,
+    "option_name": "tacos",
+    "number_of_votes": 3
+  }
+]
+```
+
+* [http://localhost:4000](http://localhost:4000) - elm app
+
+* `9000` - port for postgres db server
 
 ## Git cheatsheet
 
@@ -109,7 +146,7 @@ Make a topic branch
 git checkout -b json-example
 ```
 
-Commit changes and push to github
+Commit changes
 ```
 git commit -am "some message"
 ```
@@ -125,16 +162,9 @@ Push to github
 git push
 ```
 
-## Directory structure
-
+Checkout master branch discarding local changes
 ```
-elm-app - project folder
- |
- +-- node-api - node api server
-    |
-    +-- src - source code directory
-       |
-       +-- server.js - node code
+git checkout -f master
 ```
 
 ## Resources
