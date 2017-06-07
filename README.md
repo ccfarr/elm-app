@@ -26,7 +26,9 @@ Inspired by [Simple Node App with Docker](https://github.com/codeschool/WatchUsB
 
 5. Follow **Run elm-front-end** directions below
 
-6. Visit http://localhost:4000/ . If you see the app, SUCCESS!
+6. Visit http://localhost:4000/
+
+7. If you see the app, **SUCCESS!**
 
 ## Run `node-api` server
 
