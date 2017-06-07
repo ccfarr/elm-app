@@ -8,7 +8,6 @@ Inspired by [Simple Node App with Docker](https://github.com/codeschool/WatchUsB
 
 - Post vote changes to db
 - Complete directory structure section below
-- Specify the ports used in readme
 
 ## Issues
 
@@ -26,7 +25,7 @@ Inspired by [Simple Node App with Docker](https://github.com/codeschool/WatchUsB
 
 5. Follow **Run elm-front-end** directions below
 
-6. Visit http://localhost:4000/
+6. Visit [http://localhost:4000](http://localhost:4000)
 
 7. If you see the app, **SUCCESS!**
 
