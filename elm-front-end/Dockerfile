@@ -27,7 +27,7 @@ RUN npm install
 RUN npm install -g gulp
 RUN npm install -g elm
 
-# Start the node app
+# Run gulpfile.js
 CMD ["gulp"]
 
 # Shared directory on container side
