@@ -30,6 +30,8 @@ Inspired by [Simple Node App with Docker](https://github.com/codeschool/WatchUsB
 
 7. If you see the app, **SUCCESS!**
 
+*You should see Sandwiches: 7, Tacos: 3, which are the default values in the database.*
+
 ## Run `node-api` server
 
 From `node-api` directory, build image named `node-api`
