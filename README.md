@@ -1,3 +1,9 @@
+## Purpose
+
+Build a simple voting app using Elm + Postgres + Node + Docker  
+
+Inspired by [Simple Node App with Docker](https://github.com/codeschool/WatchUsBuild-SimpleNodeAppWithDocker.git)
+
 ## TODO
 
 - Post vote changes to db
@@ -7,12 +13,6 @@
 ## Issues
 
 - `elm-stuff` directory appears on host machine after change to `src/Main.elm`
-
-## Purpose
-
-Build a simple voting app using Elm + Postgres + Node + Docker  
-
-Inspired by [Simple Node App with Docker](https://github.com/codeschool/WatchUsBuild-SimpleNodeAppWithDocker.git)
 
 ## Installation Overview
 
