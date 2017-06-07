@@ -9,6 +9,7 @@ Inspired by [Simple Node App with Docker](https://github.com/codeschool/WatchUsB
 - Post vote changes to db
 - Complete directory structure section below
 - Add ignore topic branch to git cheatsheet
+- Specify the ports used in readme
 
 ## Issues
 
