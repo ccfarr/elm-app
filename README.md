@@ -72,7 +72,7 @@ Run container from image
 docker container run -p 4000:4000 --name elm-front-end --rm -v ~/elm-app/elm-front-end/src:/usr/src/app/src elm-front-end
 ```
 
-Wait a bit until gulp makes the elm app, something like this
+Wait a bit until gulp makes the elm app, should see something like this
 ```
 [13:35:19] elm make:  Starting downloads...
 
