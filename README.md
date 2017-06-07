@@ -9,10 +9,6 @@ Inspired by [Simple Node App with Docker](https://github.com/codeschool/WatchUsB
 - Post vote changes to db
 - Add more comments to Main.elm
 
-## Issues
-
-- `elm-stuff` directory appears on host machine after change to `src/Main.elm`
-
 ## Installation Overview
 
 1. Install Docker, e.g. [for Mac](https://store.docker.com/editions/community/docker-ce-desktop-mac)
