@@ -8,6 +8,7 @@ Inspired by [Simple Node App with Docker](https://github.com/codeschool/WatchUsB
 
 - Post vote changes to db
 - Complete directory structure section below
+- Add more comments to Main.elm
 
 ## Issues
 
@@ -76,12 +77,56 @@ docker container run -p 4000:4000 --name elm-front-end --rm -v ~/elm-app/elm-fro
 
 ```
 elm-app - project folder
- |
- +-- node-api - node api server
-    |
-    +-- src - source code directory
-       |
-       +-- server.js - node code
+  |
+  +-- elm-front-end - elm app directory
+  |  |
+  |  +-- src - source code directory
+  |  |  |
+  |  |  +-- Main.elm - elm source code
+  |  |  |
+  |  |  +-- OLD-Main.elm - local app
+  |  |
+  |  +-- Dockerfile - builds image
+  |  |
+  |  +-- elm-package.json - elm packages
+  |  |
+  |  +-- gulpfile.js - sets up a watch and server
+  |  |
+  |  +-- index.html - entrypoint into app
+  |  |
+  |  +-- package.json - required npm modules
+  |  |
+  +-- node-api - node api server directory
+  |  |
+  |  +-- src - source code directory
+  |  |  |
+  |  |  +-- server.js - node source code
+  |  |
+  |  +-- Dockerfile - builds image
+  |  |
+  |  +-- package.json - required npm modules
+  |  |
+  +-- pg-database - pg database directory
+  |  |
+  |  +-- Dockerfile - builds image
+  |  |
+  |  +-- seed.sql - seeds db
+  |
+  +-- README.MD - this file
+```
+
+## Shutdown
+
+Stop containers
+
+```
+docker stop node-api pg-database elm-front-end
+```
+
+Remove images (if desired)
+
+```
+docker image rm node-api pg-database elm-front-end
 ```
 
 ## Docker command line parameters
