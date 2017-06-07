@@ -1,8 +1,30 @@
+## TODO
+
+- Post vote changes to db
+- Complete directory structure section below
+- Add ignore topic branch to git cheatsheet
+
+## Issues
+
+- `elm-stuff` directory appears on host machine after change to `src/Main.elm`
+
 ## Purpose
 
-Build "toy" app using Elm + Postgres + Node + Docker  
+Build a simple voting app using Elm + Postgres + Node + Docker  
 
 Inspired by [Simple Node App with Docker](https://github.com/codeschool/WatchUsBuild-SimpleNodeAppWithDocker.git)
+
+### Installation Overview
+
+1. Install Docker, e.g. [for Mac](https://store.docker.com/editions/community/docker-ce-desktop-mac)
+
+2. Clone this repository to your local machine: `git clone https://github.com/ccfarr/elm-app.git`
+
+3. Follow **Run node-api server** directions below
+
+4. Follow **Run pg-database server** directions below
+
+5. Follow **Run elm-front-end** directions below
 
 ### Run node-api server
 
@@ -47,6 +69,18 @@ docker container exec -it pg-database psql -U postgres
 * `\l` - list databases
 * `\dt` - list tables
 * `\q` - quit postgres client
+
+### Run elm-front-end
+
+From `elm-front-end` directory, build image named `elm-front-end`
+```
+docker build -t elm-front-end .
+```
+
+Run container from image
+```
+docker container run -p 4000:4000 --name elm-front-end --rm -v ~/elm-app/elm-front-end/src:/usr/src/app/src elm-front-end
+```
 
 ### Git cheatsheet
 
@@ -93,7 +127,11 @@ elm-app - project folder
     |
     +-- src - source code directory
        |
-       +-- index.html - elm app
-       |
        +-- server.js - node code
 ```
+
+### Resources
+
+* [Elm screencasts](http://knowthen.com)
+
+* [Simple Node App with Docker](https://github.com/codeschool/WatchUsBuild-SimpleNodeAppWithDocker.git)

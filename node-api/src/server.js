@@ -1,7 +1,15 @@
-// Libraries and setup
+// Load libraries
 var express = require('express');
-var app = express();
 var pg = require('pg');
+var cors = require('cors')
+
+// Get reference to express
+var app = express();
+
+// Middleware to enable CORS
+// cross-origin resource sharing
+// so, elm app can get http://localhost:8888/json
+app.use(cors());
 
 // Hello world!
 app.get('/', function(request, response) {

@@ -6,8 +6,8 @@ FROM node:4.8
 # Maintainer
 LABEL maintainer="ccfarr@gmail.com"
 
-# Use port 8888 in container
-EXPOSE 8888
+# Use port 4000 in container
+EXPOSE 4000
 
 # Add directory inside container
 # -p create intermediate directories
@@ -16,16 +16,19 @@ RUN mkdir -p /usr/src/app/
 # Set working directory
 WORKDIR /usr/src/app
 
-# Copy package.json into app folder
-# since Dockerfile and package.json are in same folder
-# no need to specify path
+# Copy files into app folder
+COPY elm-package.json /usr/src/app/
+COPY gulpfile.js /usr/src/app/
+COPY index.html /usr/src/app/
 COPY package.json /usr/src/app/
 
 # Install npm modules
 RUN npm install
+RUN npm install -g gulp
+RUN npm install -g elm
 
 # Start the node app
-CMD ["npm","start"]
+CMD ["gulp"]
 
 # Shared directory on container side
 # still need to specify path when running container
