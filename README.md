@@ -7,7 +7,6 @@ Inspired by [Simple Node App with Docker](https://github.com/codeschool/WatchUsB
 ## TODO
 
 - Post vote changes to db
-- Complete directory structure section below
 - Add more comments to Main.elm
 
 ## Issues
@@ -71,6 +70,22 @@ docker build -t elm-front-end .
 Run container from image
 ```
 docker container run -p 4000:4000 --name elm-front-end --rm -v ~/elm-app/elm-front-end/src:/usr/src/app/src elm-front-end
+```
+
+Wait a bit until gulp makes the elm app, something like this
+```
+[13:35:19] elm make:  Starting downloads...
+
+  ● elm-lang/virtual-dom 2.0.4
+  ● elm-lang/http 1.0.0
+  ● elm-lang/core 5.1.1
+  ● elm-lang/html 2.0.0
+
+Packages configured successfully!
+Success! Compiled 41 modules.
+Successfully generated bundle.js
+
+[13:35:19] Finished 'elm' after 9.82 s
 ```
 
 ## Directory structure
