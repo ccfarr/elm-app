@@ -44,7 +44,7 @@ Run container from image
 docker container run -p 8888:8888 --name node-api --rm -v ~/elm-app/node-api/src:/usr/src/app/src node-api
 ```
 
-The file `src/server.js` assumes the ip address for postgres is `172.17.0.1`. This value can be found by entering `docker network inspect bridge` at the command prompt and looking for the value of `Gateway`
+The file `src/server.js` assumes the ip address for postgres is `172.17.0.1`. May not need to change. If needed, the value on your local machine can be found by entering `docker network inspect bridge` at the command prompt and looking for the value of `Gateway`
 
 ```
 "Config": [
