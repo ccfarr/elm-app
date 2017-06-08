@@ -55,8 +55,6 @@ Note: `src/server.js` assumes the ip address for postgres is `172.17.0.1`. This 
             ]
 ```
 
- postgres, look for gateway, e.g.
-
 ## Run `pg-database` server
 
 From `pg-database` directory, build image named `pg-database`
