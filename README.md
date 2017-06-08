@@ -134,6 +134,8 @@ elm-app - project folder
   |  |
   |  +-- seed.sql - seeds db
   |
+  +-- architecture.png - image of architecture
+  |
   +-- README.MD - this file
 ```
 
