@@ -48,11 +48,11 @@ The file `src/server.js` assumes the ip address for postgres is `172.17.0.1`. Ma
 
 ```
 "Config": [
-                {
-                    "Subnet": "172.17.0.0/16",
-                    "Gateway": "172.17.0.1"
-                }
-            ]
+            {
+              "Subnet": "172.17.0.0/16",
+              "Gateway": "172.17.0.1"
+            }
+          ]
 ```
 
 ## Run `pg-database` server
