@@ -44,6 +44,19 @@ Run container from image
 docker container run -p 8888:8888 --name node-api --rm -v ~/elm-app/node-api/src:/usr/src/app/src node-api
 ```
 
+Note: `src/server.js` assumes the ip address for postgres is `172.17.0.1`. This value can be found by entering `docker network inspect bridge` at the command prompt and looking for the value of `Gateway`:
+
+```
+"Config": [
+                {
+                    "Subnet": "172.17.0.0/16",
+                    "Gateway": "172.17.0.1"
+                }
+            ]
+```
+
+ postgres, look for gateway, e.g.
+
 ## Run `pg-database` server
 
 From `pg-database` directory, build image named `pg-database`
@@ -180,6 +193,10 @@ docker container exec -it pg-database psql -U postgres
 * [http://localhost:4000](http://localhost:4000) - elm app
 
 * `9000` - port for postgres db server
+
+## Architecture
+
+![Architecture](architecture.png)
 
 ## Git cheatsheet
 
